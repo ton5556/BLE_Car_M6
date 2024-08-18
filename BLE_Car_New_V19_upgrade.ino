@@ -16,9 +16,6 @@ int speed_Coeff = 4;
 boolean lightFront = false;
 boolean horn = false;
 
-unsigned long lastCommandTime = 0;       // Stores the time of the last received command
-const unsigned long commandTimeout = 1000;  // Timeout duration in milliseconds (1 second)
-
 void setup() {
   pinMode(light_FR, OUTPUT);
   pinMode(light_FL, OUTPUT);
