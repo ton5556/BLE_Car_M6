@@ -170,9 +170,4 @@ void loop() {
       case 'v': horn = false; break;
     }
   }
-
-  // Check if the timeout has elapsed
-  if (millis() - lastCommandTime > commandTimeout) {
-    stopRobot();  // Stop the robot if no command is received within the timeout
-  }
 }
