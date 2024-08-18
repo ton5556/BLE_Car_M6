@@ -11,7 +11,7 @@
 #define IN4  5          // L298N in4 motor Left
 
 int command;            // Int to store app command state.
-int speedCar;     // Fixed speed at 170
+int speedCar = 75;     // Fixed speed at 170
 int speed_Coeff = 4;
 boolean lightFront = false;
 boolean horn = false;
