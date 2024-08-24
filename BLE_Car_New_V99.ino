@@ -1,6 +1,9 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial BT(2, 3);
+#define BT_RX 11  // Bluetooth TX to Arduino RX
+#define BT_TX 10  // Bluetooth RX to Arduino TX
+
+SoftwareSerial BT(BT_TX, BT_RX); 
 
 int motor2Pin1 = 4; // pin 6 on L293D IC
 int motor2Pin2 = 5; // pin 7 on L293D IC
