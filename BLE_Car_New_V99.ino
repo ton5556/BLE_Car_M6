@@ -2,13 +2,13 @@
 
 SoftwareSerial BT(2, 3);
 
-int motor2Pin1 = 6; // pin 6 on L293D IC
-int motor2Pin2 = 7; // pin 7 on L293D IC
-int motor2EnablePin = 10; // pin 10 on L293D IC
+int motor2Pin1 = 4; // pin 6 on L293D IC
+int motor2Pin2 = 5; // pin 7 on L293D IC
+int motor2EnablePin = 7; // pin 10 on L293D IC
 
-int motor1Pin1 = 4; // pin 4 on L293D IC
-int motor1Pin2 = 5; // pin 5 on L293D IC
-int motor1EnablePin = 9; // pin 9 on L293D IC
+int motor1Pin1 = 2; // pin 4 on L293D IC
+int motor1Pin2 = 3; // pin 5 on L293D IC
+int motor1EnablePin = 6; // pin 9 on L293D IC
 
 int state;
 int Speed = 130;
@@ -40,19 +40,19 @@ void loop() {
     analogWrite(motor2EnablePin, Speed);
 
     // if the state is '1' the DC motor will go forward
-    if (state == 1) { forword(); Serial.println("Go Forward!"); }
+    if (state == F) { forword(); Serial.println("Go Forward!"); }
 
     // if the state is '2' the motor will reverse
-    else if (state == 2) { backword(); Serial.println("Reverse!"); }
+    else if (state == B) { backword(); Serial.println("Reverse!"); }
 
     // if the state is '3' the motor will turn left
-    else if (state == 3) { turnLeft(); Serial.println("Turn LEFT"); }
+    else if (state == L) { turnLeft(); Serial.println("Turn LEFT"); }
 
     // if the state is '4' the motor will turn right
-    else if (state == 4) { turnRight(); Serial.println("Turn RIGHT"); }
+    else if (state == R) { turnRight(); Serial.println("Turn RIGHT"); }
 
     // if the state is '5' the motor will stop
-    else if (state == 5) { Stop(); Serial.println("STOP!"); }
+    else if (state == S) { Stop(); Serial.println("STOP!"); }
 
     delay(1);
 }
