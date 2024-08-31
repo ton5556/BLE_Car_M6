@@ -1,4 +1,4 @@
-#include <SoftwareSerial.h>
+include <SoftwareSerial.h>
 
 #define BT_RX 11  // Bluetooth TX to Arduino RX
 #define BT_TX 10  // Bluetooth RX to Arduino TX
@@ -43,19 +43,19 @@ void loop() {
     analogWrite(motor2EnablePin, Speed);
 
     // if the state is '1' the DC motor will go forward
-    if (state == F) { forword(); Serial.println("Go Forward!"); }
+    if (state == 1) { forword(); Serial.println("Go Forward!"); }
 
     // if the state is '2' the motor will reverse
-    else if (state == B) { backword(); Serial.println("Reverse!"); }
+    else if (state == 2) { backword(); Serial.println("Reverse!"); }
 
     // if the state is '3' the motor will turn left
-    else if (state == L) { turnLeft(); Serial.println("Turn LEFT"); }
+    else if (state == 3) { turnLeft(); Serial.println("Turn LEFT"); }
 
     // if the state is '4' the motor will turn right
-    else if (state == R) { turnRight(); Serial.println("Turn RIGHT"); }
+    else if (state == 4) { turnRight(); Serial.println("Turn RIGHT"); }
 
     // if the state is '5' the motor will stop
-    else if (state == S) { Stop(); Serial.println("STOP!"); }
+    else if (state == 5) { Stop(); Serial.println("STOP!"); }
 
     delay(1);
 }
