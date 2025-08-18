@@ -1,4 +1,3 @@
-// Example By ArduinoAll
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3); // TX, RX
 void setup()
@@ -14,3 +13,4 @@ void loop()
   if (Serial.available())
     mySerial.write(Serial.read());
 }
+
